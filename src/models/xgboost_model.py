@@ -79,13 +79,21 @@ class XGBoostModel:
         if X_val is not None and y_val is not None:
             eval_set.append((X_val, y_val))
 
-        # Train model
-        self.model.fit(
-            X_train, y_train,
-            eval_set=eval_set,
-            early_stopping_rounds=20,
-            verbose=False
-        )
+        # Train model (compatible with xgboost 3.x)
+        try:
+            # Try new API (xgboost >= 2.0)
+            self.model.set_params(early_stopping_rounds=20)
+            self.model.fit(
+                X_train, y_train,
+                eval_set=eval_set,
+                verbose=False
+            )
+        except TypeError:
+            # Fallback to old API
+            self.model.fit(
+                X_train, y_train,
+                verbose=False
+            )
 
         # Get feature importance
         self.feature_importance = pd.DataFrame({

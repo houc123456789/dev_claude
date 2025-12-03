@@ -11,10 +11,12 @@ from datetime import datetime
 from src.data_fetcher import ForexDataFetcher
 from src.feature_engineering import FeatureEngineer
 from src.preprocessor import DataPreprocessor
-from src.models.lstm_model import LSTMModel
 from src.models.random_forest_model import RandomForestModel
 from src.models.xgboost_model import XGBoostModel
 from src.models.ensemble_model import EnsembleModel
+
+# Lazy import for LSTM to avoid TensorFlow dependency if not needed
+LSTMModel = None
 
 
 logger = logging.getLogger(__name__)
@@ -150,7 +152,7 @@ class ModelTrainer:
 
         return xgb_model
 
-    def train_lstm(self, data_splits: Dict) -> LSTMModel:
+    def train_lstm(self, data_splits: Dict):
         """Train LSTM model.
 
         Args:
@@ -159,6 +161,15 @@ class ModelTrainer:
         Returns:
             Trained LSTMModel
         """
+        global LSTMModel
+        if LSTMModel is None:
+            try:
+                from src.models.lstm_model import LSTMModel as LSTM
+                LSTMModel = LSTM
+            except ImportError:
+                logger.error("TensorFlow not installed. Cannot train LSTM model.")
+                raise ImportError("TensorFlow is required for LSTM. Install with: pip install tensorflow")
+
         logger.info("Training LSTM model")
 
         # Create sequences for LSTM
