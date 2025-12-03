@@ -1,0 +1,68 @@
+data:
+  symbols:
+    - EUR/USD
+    - GBP/USD
+    - USD/JPY
+    - AUD/USD
+    - USD/CAD
+  interval: "1h"  # 1m, 5m, 15m, 1h, 4h, 1d
+  lookback_days: 365
+  data_source: "alpha_vantage"  # yfinance, alpha_vantage, alpaca
+
+features:
+  technical_indicators:
+    - SMA
+    - EMA
+    - RSI
+    - MACD
+    - Bollinger_Bands
+    - ATR
+    - Stochastic
+    - ADX
+  window_sizes: [5, 10, 20, 50, 100, 200]
+  lag_features: [1, 2, 3, 5, 10]
+
+models:
+  lstm:
+    units: [128, 64, 32]
+    dropout: 0.2
+    epochs: 100
+    batch_size: 32
+    learning_rate: 0.001
+    sequence_length: 60
+
+  random_forest:
+    n_estimators: 200
+    max_depth: 20
+    min_samples_split: 5
+    min_samples_leaf: 2
+
+  xgboost:
+    n_estimators: 200
+    max_depth: 10
+    learning_rate: 0.1
+    subsample: 0.8
+    colsample_bytree: 0.8
+
+training:
+  test_size: 0.2
+  validation_size: 0.1
+  random_state: 42
+  cross_validation_folds: 5
+
+prediction:
+  horizon: 24  # Number of periods ahead to predict
+  confidence_threshold: 0.6
+  ensemble_method: "voting"  # voting, stacking, weighted
+
+backtesting:
+  initial_capital: 10000
+  risk_per_trade: 0.02
+  stop_loss: 0.01
+  take_profit: 0.03
+  max_positions: 3
+
+api_keys:
+  alpha_vantage: ${ALPHA_VANTAGE_API_KEY}
+  alpaca_key: ${ALPACA_API_KEY}
+  alpaca_secret: ${ALPACA_SECRET_KEY}
