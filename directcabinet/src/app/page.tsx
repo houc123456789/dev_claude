@@ -3,340 +3,292 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <>
-      {/* Hero Section */}
+      {/* Hero Section - 100% Freelance */}
       <section className="gradient-hero min-h-screen flex items-center relative overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-white">
-              <div className="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-medium mb-6">
-                Le staffing IT reinvente
-              </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                Toutes les garanties d&apos;un cabinet.
-                <span className="block text-emerald-300">Sans les 30% de marge cachee.</span>
-              </h1>
-              <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                DirectCabinet, c&apos;est le premier cabinet de placement IT a marge fixe et transparente.
-                Vous payez le TJM du freelance + 50 euros/jour. Point final.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/entreprises"
-                  className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors text-center"
-                >
-                  Je suis une entreprise
-                </Link>
-                <Link
-                  href="/freelances"
-                  className="px-8 py-4 bg-emerald-500 text-white font-semibold rounded-lg hover:bg-emerald-600 transition-colors text-center"
-                >
-                  Je suis freelance
-                </Link>
-              </div>
-              <div className="mt-8 flex items-center space-x-6 text-blue-100">
-                <div className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Profils verifies
-                </div>
-                <div className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Remplacement 7j
-                </div>
-                <div className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Tarifs publics
-                </div>
-              </div>
+          <div className="max-w-3xl">
+            <div className="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-medium mb-6 text-white">
+              Pour les freelances IT qui en ont marre de se faire exploiter
             </div>
-            <div className="hidden lg:block">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                <h3 className="text-white text-xl font-semibold mb-6">Comparez les couts</h3>
-                <div className="space-y-4">
-                  <div className="bg-red-500/20 rounded-lg p-4">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-white/80">Cabinet classique</span>
-                      <span className="text-red-300 font-bold">780 euros/jour</span>
-                    </div>
-                    <div className="text-sm text-white/60">TJM 600 euros + 30% marge cachee</div>
-                  </div>
-                  <div className="bg-emerald-500/20 rounded-lg p-4 border-2 border-emerald-400">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-white/80">DirectCabinet</span>
-                      <span className="text-emerald-300 font-bold">650 euros/jour</span>
-                    </div>
-                    <div className="text-sm text-white/60">TJM 600 euros + 50 euros frais fixes</div>
-                  </div>
-                  <div className="text-center pt-4 border-t border-white/20">
-                    <div className="text-emerald-300 text-2xl font-bold">-130 euros/jour</div>
-                    <div className="text-white/60 text-sm">d&apos;economies</div>
-                  </div>
-                </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white">
+              Missions grands comptes.
+              <span className="block text-emerald-300">95% du TJM pour vous.</span>
+            </h1>
+            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+              Les ESN prennent 30-50% de marge sur votre dos. Nous, on prend 5%.
+              Meme acces aux missions BNP, Total, Orange. Mais vous gardez votre argent.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <Link
+                href="/inscription"
+                className="px-8 py-4 bg-emerald-500 text-white font-semibold rounded-lg hover:bg-emerald-600 transition-colors text-center text-lg"
+              >
+                Rejoindre DirectCabinet
+              </Link>
+              <Link
+                href="/missions"
+                className="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg border-2 border-white/30 hover:bg-white/20 transition-colors text-center"
+              >
+                Voir les missions
+              </Link>
+            </div>
+
+            {/* Social Proof */}
+            <div className="flex items-center gap-6 text-white/80">
+              <div className="flex -space-x-2">
+                <div className="w-10 h-10 rounded-full bg-blue-400 flex items-center justify-center text-white font-bold text-sm border-2 border-white">JD</div>
+                <div className="w-10 h-10 rounded-full bg-emerald-400 flex items-center justify-center text-white font-bold text-sm border-2 border-white">ML</div>
+                <div className="w-10 h-10 rounded-full bg-purple-400 flex items-center justify-center text-white font-bold text-sm border-2 border-white">SC</div>
+                <div className="w-10 h-10 rounded-full bg-amber-400 flex items-center justify-center text-white font-bold text-sm border-2 border-white">+47</div>
               </div>
+              <span>50 freelances nous font deja confiance</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Problem Section */}
+      {/* Le Probleme */}
+      <section className="py-20 bg-gray-900 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+            Vous connaissez ce scenario ?
+          </h2>
+
+          <div className="space-y-8">
+            <div className="bg-gray-800 rounded-xl p-6 border-l-4 border-red-500">
+              <p className="text-lg text-gray-300">
+                <span className="text-red-400 font-bold">"Le client paie 900 euros/jour pour vous..."</span>
+              </p>
+              <p className="text-gray-400 mt-2">
+                Mais l'ESN vous reverse 550 euros. Les 350 euros restants ? Dans leur poche. Pour avoir envoye un email.
+              </p>
+            </div>
+
+            <div className="bg-gray-800 rounded-xl p-6 border-l-4 border-red-500">
+              <p className="text-lg text-gray-300">
+                <span className="text-red-400 font-bold">"Vous voulez negocier votre TJM ?"</span>
+              </p>
+              <p className="text-gray-400 mt-2">
+                "Desole, le client a un budget serre." Mensonge. Le client paie le prix fort. C'est juste que l'ESN veut garder sa marge.
+              </p>
+            </div>
+
+            <div className="bg-gray-800 rounded-xl p-6 border-l-4 border-red-500">
+              <p className="text-lg text-gray-300">
+                <span className="text-red-400 font-bold">"Vous passez par Malt pour eviter ca ?"</span>
+              </p>
+              <p className="text-gray-400 mt-2">
+                Super. Mais les grands comptes (ceux qui paient bien) n'y vont jamais. Ils passent par des cabinets. Donc vous etes coince.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* La Solution */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              DirectCabinet = Le meilleur des deux mondes
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Acces aux missions grands comptes + Vous gardez 95% de votre TJM
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <div className="text-center p-8 bg-white rounded-xl shadow-lg border border-gray-100">
+              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl">X</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">ESN / Cabinet</h3>
+              <p className="text-gray-600 mb-4">Marge de 30-50%</p>
+              <div className="text-red-600 font-bold">
+                Client paie 900 euros<br/>
+                <span className="text-2xl">Vous recevez 550 euros</span>
+              </div>
+            </div>
+
+            <div className="text-center p-8 bg-white rounded-xl shadow-lg border border-gray-100">
+              <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl">~</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Malt / Direct</h3>
+              <p className="text-gray-600 mb-4">10% de commission</p>
+              <div className="text-amber-600 font-bold">
+                Pas d'acces grands comptes<br/>
+                <span className="text-2xl">Missions courtes</span>
+              </div>
+            </div>
+
+            <div className="text-center p-8 bg-emerald-50 rounded-xl shadow-lg border-2 border-emerald-400 relative">
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                <span className="bg-emerald-500 text-white px-3 py-1 rounded-full text-sm font-medium">Recommande</span>
+              </div>
+              <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl text-emerald-600">OK</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">DirectCabinet</h3>
+              <p className="text-gray-600 mb-4">5% seulement</p>
+              <div className="text-emerald-600 font-bold">
+                Client paie 900 euros<br/>
+                <span className="text-2xl">Vous recevez 855 euros</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Calcul Impact */}
+          <div className="bg-gray-900 rounded-2xl p-8 md:p-12 text-white text-center">
+            <h3 className="text-2xl font-bold mb-8">Sur une mission de 12 mois a 700 euros/jour</h3>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <div className="text-gray-400 mb-2">Avec une ESN (30% marge)</div>
+                <div className="text-3xl font-bold text-red-400">98 000 euros</div>
+                <div className="text-gray-500">pour vous</div>
+              </div>
+              <div>
+                <div className="text-gray-400 mb-2">Avec DirectCabinet (5%)</div>
+                <div className="text-3xl font-bold text-emerald-400">133 000 euros</div>
+                <div className="text-gray-500">pour vous</div>
+              </div>
+            </div>
+            <div className="mt-8 pt-8 border-t border-gray-700">
+              <div className="text-emerald-400 text-4xl font-bold">+35 000 euros</div>
+              <div className="text-gray-400">dans votre poche. Pas celle d'un commercial.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Comment ca marche */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Le probleme avec les cabinets traditionnels
+              Comment ca marche
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Vous payez 30% de marge cachee pour des services que vous pourriez avoir a prix transparent.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white rounded-xl p-8 shadow-lg border-l-4 border-red-500">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">
-                  <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900">Cabinet classique</h3>
-              </div>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-start">
-                  <span className="text-red-500 mr-2">X</span>
-                  Marge de 30-50% cachee dans le TJM
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-500 mr-2">X</span>
-                  Aucune transparence sur le vrai cout freelance
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-500 mr-2">X</span>
-                  Commercial qui gonfle les CVs
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-500 mr-2">X</span>
-                  Le freelance perd 200 euros/jour minimum
-                </li>
-              </ul>
-              <div className="mt-6 p-4 bg-red-50 rounded-lg">
-                <div className="text-red-700 font-semibold">Pour un freelance a 600 euros</div>
-                <div className="text-red-600 text-2xl font-bold">Vous payez 780 euros/jour</div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-xl p-8 shadow-lg border-l-4 border-emerald-500">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mr-4">
-                  <svg className="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900">DirectCabinet</h3>
-              </div>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-start">
-                  <span className="text-emerald-500 mr-2">OK</span>
-                  Marge fixe de 50 euros/jour affichee publiquement
-                </li>
-                <li className="flex items-start">
-                  <span className="text-emerald-500 mr-2">OK</span>
-                  Vous voyez le vrai TJM du freelance
-                </li>
-                <li className="flex items-start">
-                  <span className="text-emerald-500 mr-2">OK</span>
-                  Profils verifies avec vraies references
-                </li>
-                <li className="flex items-start">
-                  <span className="text-emerald-500 mr-2">OK</span>
-                  Le freelance garde 95% de son TJM
-                </li>
-              </ul>
-              <div className="mt-6 p-4 bg-emerald-50 rounded-lg">
-                <div className="text-emerald-700 font-semibold">Pour un freelance a 600 euros</div>
-                <div className="text-emerald-600 text-2xl font-bold">Vous payez 650 euros/jour</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Toutes les garanties d&apos;un cabinet premium
-            </h2>
-            <p className="text-xl text-gray-600">
-              Ce qui est inclus dans les 50 euros/jour de frais de service
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="card-hover bg-white rounded-xl p-8 shadow-md border border-gray-100">
-              <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Sourcing et Matching</h3>
-              <p className="text-gray-600">
-                Base de freelances verifies, matching IA par competences. 3 profils qualifies en 48h.
-              </p>
-            </div>
-
-            <div className="card-hover bg-white rounded-xl p-8 shadow-md border border-gray-100">
-              <div className="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-7 h-7 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Verification rigoureuse</h3>
-              <p className="text-gray-600">
-                Check des references par appel, test technique si besoin, verification SIRET et assurances.
-              </p>
-            </div>
-
-            <div className="card-hover bg-white rounded-xl p-8 shadow-md border border-gray-100">
-              <div className="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Securisation juridique</h3>
-              <p className="text-gray-600">
-                Contrats conformes, garantie anti-requalification, clause de remplacement integree.
-              </p>
-            </div>
-
-            <div className="card-hover bg-white rounded-xl p-8 shadow-md border border-gray-100">
-              <div className="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Gestion administrative</h3>
-              <p className="text-gray-600">
-                Facturation centralisee, suivi des temps, reporting mensuel automatise.
-              </p>
-            </div>
-
-            <div className="card-hover bg-white rounded-xl p-8 shadow-md border border-gray-100">
-              <div className="w-14 h-14 bg-rose-100 rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-7 h-7 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Support continu</h3>
-              <p className="text-gray-600">
-                Account manager dedie, mediation si conflit, remplacement garanti sous 7 jours.
-              </p>
-            </div>
-
-            <div className="card-hover bg-white rounded-xl p-8 shadow-md border border-gray-100">
-              <div className="w-14 h-14 bg-cyan-100 rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-7 h-7 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Paiement securise</h3>
-              <p className="text-gray-600">
-                On paye le freelance meme si le client tarde. Gestion des litiges, assurance impayes.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20 bg-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8 text-center text-white">
-            <div>
-              <div className="text-5xl font-bold mb-2">50</div>
-              <div className="text-blue-200">Euros marge fixe par jour</div>
-            </div>
-            <div>
-              <div className="text-5xl font-bold mb-2">30%</div>
-              <div className="text-blue-200">D&apos;economies vs cabinets</div>
-            </div>
-            <div>
-              <div className="text-5xl font-bold mb-2">48h</div>
-              <div className="text-blue-200">Pour recevoir 3 profils</div>
-            </div>
-            <div>
-              <div className="text-5xl font-bold mb-2">7j</div>
-              <div className="text-blue-200">Garantie remplacement</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Comment ca marche ?
-            </h2>
-            <p className="text-xl text-gray-600">
-              Simple, rapide, transparent
-            </p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">
-                1
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Decrivez votre besoin</h3>
-              <p className="text-gray-600">
-                Remplissez notre formulaire avec vos criteres techniques et fonctionnels
-              </p>
+              <div className="w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">1</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Inscrivez-vous</h3>
+              <p className="text-gray-600">5 min. Gratuit. On verifie votre profil sous 48h.</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">
-                2
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Recevez 3 profils</h3>
-              <p className="text-gray-600">
-                Sous 48h, nous vous envoyons 3 freelances qualifies avec leur vrai TJM
-              </p>
+              <div className="w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">2</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Recevez des missions</h3>
+              <p className="text-gray-600">Grands comptes. Longue duree. Bon TJM.</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">
-                3
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Rencontrez-les</h3>
-              <p className="text-gray-600">
-                Entretiens directs avec les freelances. Contact transparent, sans intermediaire
-              </p>
+              <div className="w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">3</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Acceptez ou refusez</h3>
+              <p className="text-gray-600">Vous choisissez. Zero obligation. Zero pression.</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">
-                4
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Demarrez la mission</h3>
-              <p className="text-gray-600">
-                Contrat signe, mission lancee. Vous payez TJM + 50 euros/jour. C&apos;est tout.
-              </p>
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">4</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Gardez 95%</h3>
+              <p className="text-gray-600">On gere l'admin. Vous facturez. On prend 5%.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Ce qu'on gere */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Ce qu'on gere pour vous
+            </h2>
+            <p className="text-xl text-gray-600">Pour que vous vous concentriez sur votre mission</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="flex items-start p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+              <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                <svg className="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 mb-1">Prospection</h3>
+                <p className="text-gray-600 text-sm">On trouve les missions. Vous ne cherchez plus.</p>
+              </div>
+            </div>
+
+            <div className="flex items-start p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+              <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                <svg className="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 mb-1">Contrats</h3>
+                <p className="text-gray-600 text-sm">On redige. Vous signez. C'est tout.</p>
+              </div>
+            </div>
+
+            <div className="flex items-start p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+              <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                <svg className="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 mb-1">Paiement garanti</h3>
+                <p className="text-gray-600 text-sm">On vous paie meme si le client tarde.</p>
+              </div>
+            </div>
+
+            <div className="flex items-start p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+              <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                <svg className="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 mb-1">Facturation</h3>
+                <p className="text-gray-600 text-sm">On centralise. Vous n'avez rien a gerer.</p>
+              </div>
+            </div>
+
+            <div className="flex items-start p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+              <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                <svg className="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 mb-1">Protection juridique</h3>
+                <p className="text-gray-600 text-sm">Anti-requalification. Assurances incluses.</p>
+              </div>
+            </div>
+
+            <div className="flex items-start p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+              <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                <svg className="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 mb-1">Support</h3>
+                <p className="text-gray-600 text-sm">Un probleme ? On gere. Vous bossez.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Temoignages */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Ils nous font confiance
+              Ils ont quitte leur ESN
             </h2>
           </div>
 
@@ -350,37 +302,13 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-gray-600 mb-6">
-                &quot;On economise 2500 euros par mois sur notre equipe de 3 freelances. Et en plus, on voit enfin ce qu&apos;on paie vraiment.&quot;
+                "8 ans en ESN. Je gardais 65% de mon TJM. Maintenant 95%. Sur l'annee, ca fait 40k de plus. Pour le meme travail."
               </p>
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold mr-4">
-                  SC
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-900">Sophie C.</div>
-                  <div className="text-gray-500 text-sm">CTO, Scale-up FinTech</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-xl p-8 shadow-md">
-              <div className="flex items-center mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
-              <p className="text-gray-600 mb-6">
-                &quot;Apres 8 ans en ESN, je gardais 65% de mon TJM. Maintenant j&apos;en garde 95%. Je ne reviendrai jamais en arriere.&quot;
-              </p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 font-bold mr-4">
-                  ML
-                </div>
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold mr-4">ML</div>
                 <div>
                   <div className="font-semibold text-gray-900">Marc L.</div>
-                  <div className="text-gray-500 text-sm">Data Engineer Freelance</div>
+                  <div className="text-gray-500 text-sm">Data Engineer - 7 ans xp</div>
                 </div>
               </div>
             </div>
@@ -394,15 +322,33 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-gray-600 mb-6">
-                &quot;Enfin un interlocuteur honnete ! Le freelance et moi savons exactement ce que l&apos;autre gagne. Ca change tout.&quot;
+                "J'avais peur de perdre l'acces aux grands comptes en quittant mon ESN. Avec DirectCabinet, j'ai les memes missions. Sans l'intermediaire."
               </p>
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 font-bold mr-4">
-                  AD
-                </div>
+                <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 font-bold mr-4">SC</div>
                 <div>
-                  <div className="font-semibold text-gray-900">Antoine D.</div>
-                  <div className="text-gray-500 text-sm">Directeur Tech, PME Retail</div>
+                  <div className="font-semibold text-gray-900">Sophie C.</div>
+                  <div className="text-gray-500 text-sm">DevOps - 9 ans xp</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl p-8 shadow-md">
+              <div className="flex items-center mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-gray-600 mb-6">
+                "Le plus fou ? Mon client ne savait meme pas qu'il payait 850 euros/jour alors que j'en touchais 500. Maintenant on est tous les deux gagnants."
+              </p>
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 font-bold mr-4">JD</div>
+                <div>
+                  <div className="font-semibold text-gray-900">Julien D.</div>
+                  <div className="text-gray-500 text-sm">Architecte Cloud - 12 ans xp</div>
                 </div>
               </div>
             </div>
@@ -410,29 +356,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gray-900">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Pret a economiser 30% sur vos freelances ?
+      {/* CTA Final */}
+      <section className="py-20 bg-emerald-600">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Arretez d'enrichir les ESN.
           </h2>
-          <p className="text-xl text-gray-400 mb-8">
-            Rejoignez les entreprises qui ont choisi la transparence. Premier placement offert.
+          <p className="text-xl text-emerald-100 mb-8">
+            Inscription gratuite. Verification sous 48h. Premieres missions dans la semaine.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/inscription?type=entreprise"
-              className="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Trouver un freelance
-            </Link>
-            <Link
-              href="/inscription?type=freelance"
-              className="px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
-            >
-              Rejoindre comme freelance
-            </Link>
-          </div>
+          <Link
+            href="/inscription"
+            className="inline-block px-10 py-5 bg-white text-emerald-700 font-bold rounded-lg hover:bg-emerald-50 transition-colors text-lg"
+          >
+            Rejoindre DirectCabinet
+          </Link>
+          <p className="mt-6 text-emerald-200 text-sm">
+            Deja 50 freelances. Missions BNP, Total, Orange, L'Oreal...
+          </p>
         </div>
       </section>
     </>
