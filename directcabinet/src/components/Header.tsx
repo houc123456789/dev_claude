@@ -41,6 +41,7 @@ export default function Header() {
               { href: '/missions', label: 'Missions' },
               { href: '/#solution', label: 'Comment ca marche' },
               { href: '/pricing', label: 'Tarifs' },
+              { href: '/blog', label: 'Blog' },
               { href: '/faq', label: 'FAQ' },
             ].map((link) => (
               <Link
@@ -107,6 +108,13 @@ export default function Header() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Tarifs
+              </Link>
+              <Link
+                href="/blog"
+                className="px-4 py-3 text-slate-600 hover:text-emerald-600 hover:bg-emerald-50 rounded-xl font-medium transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Blog
               </Link>
               <Link
                 href="/faq"
