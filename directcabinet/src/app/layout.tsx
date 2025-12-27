@@ -4,13 +4,27 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "DirectCabinet - Cabinet de placement IT a marge transparente",
-  description: "Le premier cabinet de placement IT a marge fixe transparente. Economisez 30% sur vos freelances. Toutes les garanties d un cabinet, sans la marge cachee.",
-  keywords: "freelance IT, placement freelance, cabinet staffing transparent, consultant data, developpeur freelance",
+  title: "DirectCabinet - Missions grands comptes, 95% du TJM pour vous",
+  description: "Acces aux missions CAC40 sans passer par une ESN. Commission de 5% seulement. Gardez 95% de votre TJM. Paiement garanti a 30 jours.",
+  keywords: "freelance IT, missions grands comptes, TJM freelance, consultant data, developpeur freelance, devops freelance, architecte cloud",
+  authors: [{ name: "DirectCabinet" }],
+  creator: "DirectCabinet",
+  publisher: "DirectCabinet",
+  robots: "index, follow",
   openGraph: {
-    title: "DirectCabinet - Staffing IT transparent",
-    description: "Economisez 30% sur vos freelances IT. Marge fixe de 50 euros/jour au lieu de 30% caches.",
+    title: "DirectCabinet - Missions grands comptes, 95% du TJM",
+    description: "Arretez d'enrichir les ESN. Acces direct aux missions CAC40 avec seulement 5% de commission.",
     type: "website",
+    locale: "fr_FR",
+    siteName: "DirectCabinet",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DirectCabinet - 95% du TJM pour vous",
+    description: "Missions grands comptes sans ESN. 5% de commission seulement.",
+  },
+  alternates: {
+    canonical: "https://directcabinet.fr",
   },
 };
 

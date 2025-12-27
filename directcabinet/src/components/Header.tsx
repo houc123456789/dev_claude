@@ -38,8 +38,10 @@ export default function Header() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
             {[
+              { href: '/missions', label: 'Missions' },
               { href: '/#solution', label: 'Comment ca marche' },
               { href: '/pricing', label: 'Tarifs' },
+              { href: '/faq', label: 'FAQ' },
             ].map((link) => (
               <Link
                 key={link.href}
@@ -86,6 +88,13 @@ export default function Header() {
           <div className="md:hidden py-4 border-t border-slate-100 bg-white rounded-b-2xl shadow-xl">
             <div className="flex flex-col space-y-1 px-2">
               <Link
+                href="/missions"
+                className="px-4 py-3 text-slate-600 hover:text-emerald-600 hover:bg-emerald-50 rounded-xl font-medium transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Missions
+              </Link>
+              <Link
                 href="/#solution"
                 className="px-4 py-3 text-slate-600 hover:text-emerald-600 hover:bg-emerald-50 rounded-xl font-medium transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
@@ -98,6 +107,13 @@ export default function Header() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Tarifs
+              </Link>
+              <Link
+                href="/faq"
+                className="px-4 py-3 text-slate-600 hover:text-emerald-600 hover:bg-emerald-50 rounded-xl font-medium transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                FAQ
               </Link>
               <div className="pt-2 mt-2 border-t border-slate-100">
                 <Link

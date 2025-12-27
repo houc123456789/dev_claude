@@ -227,6 +227,24 @@ export default function AdminPage() {
     );
   }
 
+  // Calculate stats
+  const stats = {
+    total: inscriptions.length,
+    new: inscriptions.filter(i => i.status === 'new').length,
+    contacted: inscriptions.filter(i => i.status === 'contacted').length,
+    validated: inscriptions.filter(i => i.status === 'validated').length,
+    rejected: inscriptions.filter(i => i.status === 'rejected').length,
+    thisWeek: inscriptions.filter(i => {
+      const date = new Date(i.createdAt);
+      const now = new Date();
+      const weekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+      return date >= weekAgo;
+    }).length,
+    conversionRate: inscriptions.length > 0
+      ? Math.round((inscriptions.filter(i => i.status === 'validated').length / inscriptions.length) * 100)
+      : 0,
+  };
+
   return (
     <div className="min-h-screen bg-slate-100">
       {/* Header */}
@@ -268,6 +286,34 @@ export default function AdminPage() {
             {error}
           </div>
         )}
+
+        {/* Stats Dashboard */}
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-8">
+          <div className="card-premium p-4">
+            <div className="text-2xl font-bold text-slate-900">{stats.total}</div>
+            <div className="text-xs text-gray-500">Total inscriptions</div>
+          </div>
+          <div className="card-premium p-4">
+            <div className="text-2xl font-bold text-blue-600">{stats.new}</div>
+            <div className="text-xs text-gray-500">Nouveaux</div>
+          </div>
+          <div className="card-premium p-4">
+            <div className="text-2xl font-bold text-amber-600">{stats.contacted}</div>
+            <div className="text-xs text-gray-500">Contactes</div>
+          </div>
+          <div className="card-premium p-4">
+            <div className="text-2xl font-bold text-emerald-600">{stats.validated}</div>
+            <div className="text-xs text-gray-500">Valides</div>
+          </div>
+          <div className="card-premium p-4">
+            <div className="text-2xl font-bold text-sky-600">{stats.thisWeek}</div>
+            <div className="text-xs text-gray-500">Cette semaine</div>
+          </div>
+          <div className="card-premium p-4">
+            <div className="text-2xl font-bold text-violet-600">{stats.conversionRate}%</div>
+            <div className="text-xs text-gray-500">Taux de conversion</div>
+          </div>
+        </div>
 
         {/* Filters */}
         <div className="flex gap-2 mb-6 flex-wrap">
