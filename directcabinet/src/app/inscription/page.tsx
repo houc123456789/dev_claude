@@ -6,6 +6,8 @@ import Link from 'next/link';
 export default function InscriptionPage() {
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const [formData, setFormData] = useState({
     name: '',
@@ -25,10 +27,28 @@ export default function InscriptionPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Submitted:', formData);
-    setSubmitted(true);
+    setLoading(true);
+    setError('');
+
+    try {
+      const res = await fetch('/api/inscriptions', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) {
+        throw new Error('Erreur lors de l\'inscription');
+      }
+
+      setSubmitted(true);
+    } catch {
+      setError('Une erreur est survenue. Veuillez reessayer.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -309,19 +329,27 @@ export default function InscriptionPage() {
                   />
                 </div>
 
+                {error && (
+                  <div className="p-4 bg-red-50 text-red-600 rounded-xl text-sm">
+                    {error}
+                  </div>
+                )}
+
                 <div className="flex gap-4 mt-4">
                   <button
                     type="button"
                     onClick={() => setStep(1)}
-                    className="flex-1 px-6 py-3.5 bg-slate-100 text-slate-700 font-semibold rounded-xl hover:bg-slate-200 transition-colors"
+                    disabled={loading}
+                    className="flex-1 px-6 py-3.5 bg-slate-100 text-slate-700 font-semibold rounded-xl hover:bg-slate-200 transition-colors disabled:opacity-50"
                   >
                     Retour
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 btn-primary text-center"
+                    disabled={loading}
+                    className="flex-1 btn-primary text-center disabled:opacity-50"
                   >
-                    Rejoindre DirectCabinet
+                    {loading ? 'Envoi en cours...' : 'Rejoindre DirectCabinet'}
                   </button>
                 </div>
               </div>
